@@ -1,0 +1,172 @@
+/* ====== GLOBAL STYLES ====== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 18px;
+    color: #2D3748;
+    margin: 0;
+    padding: 0;
+    background-color: #f7fafc;
+    line-height: 1.6;
+}
+
+/* ====== GRID LAYOUT ====== */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 250px; /* main content first, sidebar second */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Assign grid areas */
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* ====== HEADER ====== */
+header {
+    display: flex;
+    flex-direction: column;       /* Stack elements vertically */
+    align-items: center;          /* Center horizontally */
+    justify-content: center;      /* Center vertically if header has height */
+    gap: 15px;                    /* Space between image, h1, and paragraph */
+    background-color: #63B3ED;
+    color: #FFFFFF;
+    padding: 50px 20px;           /* Adds top/bottom spacing */
+    text-align: center;
+}
+
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0 0;
+}
+
+/* ====== MAIN CONTENT ====== */
+article {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+article h2 {
+    font-size: 32px;
+    color: #48BB78;
+    margin-top: 0;
+}
+
+article h4 {
+    color: #718096;
+    font-weight: normal;
+    margin: 5px 0 15px 0;
+}
+
+article img {
+    float: left;
+    margin: 0 15px 15px 0;
+    width: 250px;
+    border-radius: 8px;
+}
+
+article p::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*  sidebar  */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* About section */
+aside section:first-child {
+    background-color: #E2E8F0;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+aside section:first-child h3 {
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Social Media and Archives */
+aside section:nth-child(2) h3,
+aside section:nth-child(3) h3 {
+    color: #48BB78;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 5px 0;
+}
+
+aside ul li a {
+    color: #4299E1;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+/*  footer  */
+footer {
+    background-color: #2C5282;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 6px;
+}
+
+.float-left {
+    float: left;
+    margin: 0 15px 15px 0;
+    border-radius: 8px;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 15px 15px;
+    border-radius: 8px;
+}
